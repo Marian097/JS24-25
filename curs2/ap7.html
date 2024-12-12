@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap7</title>
+</head>
+<body>
+    <script>
+        // Date de intrare
+        // n numarul produse
+        //Pretul pentru fiecare produs in parte
+        //Date de iesire p_min, p_max
+        let n_produse;
+        let pret_produs;
+        let p_min=300
+        let p_max=1
+        n = +window.prompt("Introduce-ti numarul de produse cumparate", 3)
+
+        for (let i = 1; i<=n; i++){
+            pret_produs=window.prompt ("Va rugam introduce-ti pretul pentru produs: " +i, 1 )
+            if (pret_produs <= p_min){
+                p_min = pret_produs;
+            }
+            if (pret_produs >= p_max){
+                p_max=pret_produs;
+            }
+        }
+
+        document.write ("<p>Pretul minim este: " +p_min+"</p>")
+        document.write ("<p>Pretul maxim este: " +p_max+"</p>")
+        
+
+
+    </script>
+</body>
+</html>

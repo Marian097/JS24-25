@@ -1,0 +1,17 @@
+1-c true
+2-a false
+3-a false
+4-c && a | c || a - partial
+5-c true
+7-  
+8-
+9- a +b true
+10- b + c partial
+11-BMW true
+12-EROARE true
+13-55 && 55 partial
+14- 
+15- Saab false
+
+
+
