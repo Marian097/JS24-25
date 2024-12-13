@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provocare combinata</title>
+</head>
+<body>
+    <script>
+        var numar_secret = 5
+        var incercari;
+        var raspuns;
+        raspuns= +prompt ("Ghiceste numarul secret: ", )
+
+        for (incercari=0; raspuns == numar_secret; incercari++){
+
+            if (raspuns > numar_secret){
+                document.write ("<p>Numarul " + raspuns + "este mai mare decat numarul secret</p>")
+            }
+
+            else if ( raspuns <= numar_secret){
+                document.write ("<p> Numarul " + raspuns + " este mai mic sau egal cu numarul secret </p>" )
+            }
+            
+            else if(incercari > 3) {
+                document.write ("Ai pierdut. Numarul secret era: " + numar_secret)
+            }
+            
+            document.write ("<p>Felicitari! Ati ghicit numarul secret.</p>")
+        }
+        
+
+
+    </script>
+</body>
+</html>
+<!-- 
+
+Scrie un program care simulează un joc simplu. Utilizează următorii pași:
+
+Declara o variabilă numar_secret cu o valoare între 1 și 10.
+Folosește un ciclu for pentru a permite utilizatorului să ghicească de 3 ori numărul secret.
+După fiecare încercare, verifică dacă numărul introdus este:
+Mai mare sau mai mic decât numar_secret (afișează un mesaj corespunzător).
+Dacă ghicește, oprește jocul și afișează: "Felicitări! Ai ghicit!"
+Dacă nu ghicește după 3 încercări, afișează: "Ai pierdut! Numărul secret era [numar_secret]." -->
