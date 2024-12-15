@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap19</title>
+</head>
+<body>
+    <script>
+
+        let media_pozitive;
+        let media_negative;
+        let suma_nr_negativa = 0;
+        let suma_nr_pozitiva = 0
+        let list_negativ=[];
+        let list_pozitiv=[];
+
+        let listNr=[-5, 7, -10, 12, 15, -2, 22, 25, 30, -3, ]
+
+        for ( let i= 0; i <= listNr.length; i ++)
+        {
+            if (listNr[i] < 1)
+            {
+                list_negativ.push(listNr[i])
+                suma_nr_negativa += listNr[i]
+    
+            }
+            if (listNr[i] >= 1)
+            {
+                list_pozitiv.push(listNr[i])
+                suma_nr_pozitiva += listNr[i]
+            }
+
+        }
+
+        media_negative = suma_nr_negativa / list_negativ.length
+        console.log("Media numerelor negative este: " + media_negative )
+
+        media_pozitive = suma_nr_pozitiva / list_pozitiv.length
+        console.log ("Media numerelor pozitive este: " + media_pozitive)
+    
+
+
+
+
+    </script>
+</body>
+</html>

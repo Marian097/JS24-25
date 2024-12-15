@@ -7,28 +7,37 @@
 </head>
 <body>
     <script>
-        var numar_secret = 5
-        var incercari;
-        var raspuns;
-        raspuns= +prompt ("Ghiceste numarul secret: ", )
+        let numar_secret=5;
+        let numar;
+        let ghicit=false;
 
-        for (incercari=0; raspuns == numar_secret; incercari++){
 
-            if (raspuns > numar_secret){
-                document.write ("<p>Numarul " + raspuns + "este mai mare decat numarul secret</p>")
-            }
+        for ( let contor = 0; contor < 3; contor++){
+            numar=+window.prompt ("Va rugam introduce-ti un numar de la 1 la 10:", )
 
-            else if ( raspuns <= numar_secret){
-                document.write ("<p> Numarul " + raspuns + " este mai mic sau egal cu numarul secret </p>" )
-            }
+                if (numar === numar_secret)
+            {
+                console.log ("Felicitari! ai ghicit numarul.")
+                ghicit=true
+                break
+            } 
             
-            else if(incercari > 3) {
-                document.write ("Ai pierdut. Numarul secret era: " + numar_secret)
+            if (numar > numar_secret)
+        {
+            console.log("Numarul ales este mai mare decat cel secret")
+        }   
+            else
+            {
+                console.log("Numarul ales este mai mare decat numarul secret.")
             }
-            
-            document.write ("<p>Felicitari! Ati ghicit numarul secret.</p>")
+
         }
-        
+
+        if (ghicit == false)
+            {
+                console.log("Ne pare rau dar ati pierdut.")
+            }
+
 
 
     </script>

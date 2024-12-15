@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap24</title>
+</head>
+<body>
+    <script>
+        let numar = 3792
+        let listNumber=[]
+        let nrMax = 0;
+
+        let stringNumber=numar.toString().split('')
+
+        for ( let i = 0; i<=stringNumber.length; i++)
+        {
+
+            if (nrMax <= stringNumber[i])
+            {
+                nrMax = stringNumber[i]
+
+            }
+        }
+
+        console.log("Cea mai mare cifra al numarului 3792 este: " + nrMax)
+
+
+
+
+    </script>
+</body>
+</html>

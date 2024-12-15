@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap 13</title>
+</head>
+<body>
+    <script>
+        let numar = +prompt ("Alege un numar: ", )
+        let estePrim=true
+
+        if (numar <= 1)
+        {
+            estePrim=false
+        }
+
+        for (let i = 2; i < numar; i ++)
+        {
+            if (numar % 2 === 0)
+            {
+                estePrim=false
+            }
+
+        }
+
+        if (estePrim)
+        {
+            console.log ("Numarul " + numar + "este prim")
+        } 
+        else
+        console.log ("Numarul " + numar + "nu este prim")
+
+    </script>
+</body>
+</html>
+
+
+
