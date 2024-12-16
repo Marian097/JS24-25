@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sa se afle cifra maxima a unui numar </title>
+</head>
+<body>
+    
+    <script>
+
+        let nr=7943
+        let nrMax = '';
+
+        let stringNr=nr.toString(). split('')
+        console.log(stringNr)
+
+        for ( let i = 0; i <= stringNr.length; i++)
+        {
+            if (nrMax < stringNr[i] )
+            {
+                nrMax=stringNr[i]
+                nrMax=Number(nrMax)
+
+            }
+        } console.log("Cifra maxima din numarul " + nr + " este: " + nrMax)
+
+
+
+    </script>
+</body>
+</html>
