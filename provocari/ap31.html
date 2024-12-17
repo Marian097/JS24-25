@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ap 31 black friday</title>
 </head>
+
 <body>
     <script>
-        let produs1=90
-        let produs2=170
+        let produs1 = 90
+        let produs2 = 170
 
-        let produs1Tva=0;
-        let produs2Tva=0;
+        let produs1Tva = 0;
+        let produs2Tva = 0;
 
-        let produs1FaraTva=0;
-        let produs2FaraTva=0;
+        let produs1FaraTva = 0;
+        let produs2FaraTva = 0;
 
 
-        let dateBeforeBF=new Date ("2024-12-25");
-        let dateBlackFriday= new Date ("2024-12-26");
+        let dateBeforeBF = new Date("2024-12-25");
+        let dateBlackFriday = new Date("2024-12-26");
 
         console.log("Pretul initial produse:")
-        console.log ("produs1: " + produs1 + " produs2: " + produs2 )
+        console.log("produs1: " + produs1 + " produs2: " + produs2)
 
-        
-        if (dateBeforeBF < dateBlackFriday)
-        {
-            if (produs1 <= 100)
-            {
+
+        if (dateBeforeBF < dateBlackFriday) {
+            if (produs1 <= 100) {
                 produs1 += 10
             }
-            
-            if ( produs2 <= 100)
-            {
+
+            if (produs2 <= 100) {
                 produs2 += 10
             }
 
-        
-            if (produs1 > 100 && produs1 <=200)
-            {
+
+            if (produs1 > 100 && produs1 <= 200) {
                 produs1 += 30
-                
-            }
-            
-            if (produs2 > 100 && produs2 <= 200)
-            {
-                produs2 += 30
-                
+
             }
 
-            else
-            {
+            if (produs2 > 100 && produs2 <= 200) {
+                produs2 += 30
+
+            }
+
+            else {
                 produs1 += 60
                 produs2 += 60
             }
 
-        console.log ("Pretul produselor inainte de black friday: ")
-        console.log ("Produs1: " + produs1 + " produs2: " + produs2)
-    
-    }
+            console.log("Pretul produselor inainte de black friday: ")
+            console.log("Produs1: " + produs1 + " produs2: " + produs2)
 
-    if (dateBlackFriday)
-    {
-        produs1 -= (produs1 * 0.15)
-        produs2 -= (produs2 * 0.15)
+        }
 
-        console.log("Pretul produselor de black friday este : ")
-        console.log ("Produs1: " + produs1 + " produs2: " + produs2)
+        if (dateBlackFriday) {
+            produs1 -= (produs1 * 0.15)
+            produs2 -= (produs2 * 0.15)
 
-        produs1Tva += (produs1 * 0.19)
-        produs2Tva += (produs2 * 0.19)
+            console.log("Pretul produselor de black friday este : ")
+            console.log("Produs1: " + produs1 + " produs2: " + produs2)
 
-        produs1FaraTva = produs1 - produs1Tva
-        produs2FaraTva = produs2 - produs2Tva
+            produs1Tva += (produs1 * 0.19)
+            produs2Tva += (produs2 * 0.19)
 
-        console.log ("Pretul produselor de black friday cu TVA este : ")
-        console.log ("Produs1: " + produs1 + " produs2: " + produs2)
+            produs1FaraTva = produs1 - produs1Tva
+            produs2FaraTva = produs2 - produs2Tva
 
-        console.log ("Pretul produselor de black friday fara TVA este : ")
-        console.log ("Produs1: " + produs1FaraTva + " produs2 " + produs2FaraTva)
+            console.log("Pretul produselor de black friday cu TVA este : ")
+            console.log("Produs1: " + produs1 + " produs2: " + produs2)
 
-    }
+            console.log("Pretul produselor de black friday fara TVA este : ")
+            console.log("Produs1: " + produs1FaraTva + " produs2 " + produs2FaraTva)
 
-
-
-    
-
+        }
 
 
     </script>
 </body>
+
 </html>

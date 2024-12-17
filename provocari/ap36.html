@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap 36</title>
+</head>
+
+<body>
+    <script>
+        let parolaCorecta="parola123"
+        let parola;
+        let incercari=3
+
+
+        do
+        {
+            parola=window.prompt("Va rog introduceti o parola: ", )
+
+            if (parola !== parolaCorecta)
+            {
+                incercari--
+            }
+
+            if (parola === parolaCorecta)
+            {
+                console.log("Parola corecta. Acces permis")
+            }
+
+            if (incercari === 0)
+                {
+                    console.log("Ai esuat. Incercari epuizate")
+                    break
+                }
+
+        }while(parola !== parolaCorecta);
+        
+
+    
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- Creează un program care cere utilizatorului parola corectă. Permite utilizatorului să aibă doar 3 încercări. Dacă
+introduce parola greșită de 3 ori, afișează mesajul „Ai eșuat, încercări epuizate”. Dacă introduce corect parola,
+afișează „Parola corectă, acces permis”. -->
