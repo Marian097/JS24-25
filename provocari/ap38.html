@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ap38</title>
     <style>
-        #avertizare1{
+        div img {
+            width: 100px;
+            height: 100px;
+        }
+
+        div p {
             color: orange;
+            font-size: 30px;
         }
         
         #avertizare2{
             color: red;
+            font-size: 30px;
         }
 
     </style>
@@ -19,13 +26,35 @@
 
 <body>
     <script>
+        window.alert("Va rog alimentati: ")
+        let fuel;
+        fuel = +window.prompt("Litri: ")
 
-        let fuel = 50
+        do{
+            if ( fuel > 0)
+            {
+                fuel--
+            }
 
-        for ( let consum = 1; i <= fuel; fuel--)
-        {
-            console.log(fuel)
-        }
+            if( fuel < 10 && fuel >= 1 ){
+                document.write("<div><img src='./fuel.jpg'><p>Va rog sa alimentati</p></div>")
+            } 
+
+            if (fuel < 1)
+                
+                {
+                    document.write("<p id='avertizare2'> Ati ramas fara combustibil. Trebuie sa ne oprim</p>")
+                    break
+                }
+            
+
+           
+
+        }while(fuel > 0)
+
+
+        
+        
     </script>
 </body>
 
