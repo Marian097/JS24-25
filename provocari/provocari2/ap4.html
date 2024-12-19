@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap4</title>
+</head>
+<body>
+    <button type="button" id="increment">+</button>
+    <button type="button" id="decrement">-</button>
+    <p id="output"></p>
+
+    <script>
+        let numar;
+        numar = +window.prompt ("Va rog sa alegeti un numar: ", )
+
+
+        const buttonIncrement = document.getElementById("increment")
+        const buttonDecrement = document.getElementById("decrement")
+        const output = document.getElementById("output")
+        output.innerHTML +=numar
+
+        buttonIncrement.onclick=function()
+        {
+            numar++
+            output.innerHTML = numar   
+        }
+
+        buttonDecrement.onclick=function()
+        {
+            numar --
+            output.innerHTML = numar
+            if (numar < 0)
+            {
+                output.innerHTML="Numerele negative nu sunt acceptate."
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 3. Incrementare/decrementare cu butoane
+Creează două butoane: unul pentru a incrementa un număr și altul pentru a-l decrementa.
+Afișează numărul curent într-un element HTML care se actualizează după fiecare apăsare a unui buton. -->

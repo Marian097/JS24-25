@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap3</title>
+</head>
+<body>
+    <button type="button" id="mesaj">Afiseaza mesaj</button>
+    <p id="output"></p>
+    <script>
+        const button = document.getElementById("mesaj")
+        const output = document.getElementById("output")
+
+        button.onclick=function(){
+            let mesaj= "Salut. Bine ai venit in mediu de lucru JavaScript"
+            output.innerHTML ="<mark> " + mesaj + "</mark>"
+
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 2. Afișarea unui mesaj după apăsarea unui buton
+Creează un buton care, atunci când este apăsat, afișează un mesaj pe pagină (poate fi un mesaj personalizat sau un mesaj de întâmpinare). -->

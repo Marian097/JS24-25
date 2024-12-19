@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap2</title>
+</head>
+
+<body>
+    <button id="StartNumaratoare">Start</button>
+    <p id="output"></p>
+    <script>
+        const button = document.getElementById("StartNumaratoare")
+        const output = document.getElementById ("output")
+        
+        button.onclick = function (numar){
+            numar = window.prompt("Va rog introduceti numarul:", )
+            for (let i=1; i <= numar; i++){
+                output.innerHTML += i + "<br>"
+                
+            }
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+<!-- 
+1. Numărătoare în ordine crescătoare
+Creează un buton care, atunci când este apăsat, numără de la 1 până la un număr introdus de utilizator.
+Afișează fiecare număr pe o linie separată. -->

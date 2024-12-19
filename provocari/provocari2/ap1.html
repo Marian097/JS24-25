@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap1</title>
+</head>
+<body>
+    <main>
+        <button id="startNumaratoare">Start numaratoare</button>
+        <p id="output"></p>
+    </main>
+    <script>
+        const button=document.getElementById("startNumaratoare")
+        const output=document.getElementById("output")
+        button.onclick=function (nr){
+            nr = +window.prompt("Va rog introduceti un numar: ",)
+            while (nr >= 0) {
+                output.innerHTML+= nr + "<br>"
+                nr--
+                if (nr <= 0) {
+                    window.alert("Eroare. Numarul nu trebuie sa fie mai mic decat 0")
+                    break
+                }
+            }
+    
+
+        };
+
+       
+            
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 1. Exercițiul "Numărătoarea inversă"
+Descriere:
+Creează o pagină web cu:
+
+Un buton.
+Un paragraf în care să afișezi o numărătoare inversă de la un număr introdus de utilizator până la 0.
+Cerințe:
+
+Utilizează prompt pentru a cere utilizatorului un număr.
+Folosește bucla while pentru numărătoare.
+Dacă numărul introdus este mai mic decât 0, afișează un mesaj de eroare. -->
