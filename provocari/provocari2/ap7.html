@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ascunde sau Afișează Text</title>
+</head>
+<body>
+
+  <p id="text" style="display: block;">Acesta este textul care va fi ascuns sau afișat.</p>
+  <button onclick="toggleText()">Ascunde/Afișează Text</button>
+
+  <script>
+    function toggleText() {
+      var textElement = document.getElementById('text');
+      if (textElement.style.display === 'none') {
+        textElement.style.display = 'block';
+      } else {
+        textElement.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+<!-- Buton pentru ascunderea unui text: Creează un buton care, atunci când este
+apăsat, ascunde sau afișează un text pe pagină (folosind display: none sau
+display: block). -->

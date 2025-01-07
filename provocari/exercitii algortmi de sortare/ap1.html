@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        function selectionSort(array) {
+            const n = array.length;
+          
+            // Parcurgem array-ul
+            for (let i = 0; i < n - 1; i++) {
+              // Presupunem că elementul curent este cel mai mic
+              let minIndex = i;
+          
+              // Căutăm cel mai mic element în restul array-ului
+              for (let j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                  minIndex = j; // Actualizăm indexul celui mai mic element
+                }
+              }
+          
+              // Interschimbăm elementul curent cu cel mai mic element găsit
+              if (minIndex !== i) {
+                let temp = array[i];
+                array[i] = array[minIndex];
+                array[minIndex] = temp;
+              }
+            }
+          
+            return array; // Returnăm array-ul sortat
+          }
+          
+          const numere = [5, 3, 8, 1, 2];
+          console.log("Array nesortat:", numere);
+
+          const sortat = selectionSort(numere);
+          console.log("Array sortat:", sortat);        
+        
+
+    </script>
+
+        
+    
+</body>
+</html>
+
+
+<!-- 1. Sortare crescătoare de numere
+Scrie un algoritm care sortează un array de numere întregi în ordine crescătoare.
+Exemplu de input: [5, 3, 8, 1, 2]
+Exemplu de output: [1, 2, 3, 5, 8] -->
+
+<!-- Cum funcționează:
+          La primul pas, algoritmul găsește cel mai mic element (1) și îl mută la începutul array-ului.
+          Array devine: [1, 3, 8, 5, 2].
+          Apoi caută cel mai mic element din restul array-ului (începând de la al doilea element).
+          Găsește 2 și îl mută pe poziția 1.
+          Array devine: [1, 2, 8, 5, 3].
+          Continuă să găsească și să mute elementele, până când întregul array este sortat.
+          Avantaje și Dezavantaje:
+          Avantaje:
+          Ușor de înțeles și de implementat.
+          Nu necesită memorie suplimentară (sortare "in-place").
+          Dezavantaje:
+          Este ineficient pentru array-uri mari, având o complexitate de O(n²). -->
+
