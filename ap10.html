@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ghiceste numarul intre 1-10: <input type="number" name="number" id="number"></p>
+    <button type="submit" onclick="ghiceste()">Ghiceste!</button>
+    <p id="output"></p>
+    <script>
+        let numar=Math.floor(Math.random() * 10) + 1
+        alert(numar)
+
+        function ghiceste()
+        {
+            const numarAles=parseInt(document.getElementById("number").value)
+            
+            if (numarAles < 1 || numarAles > 10 || isNaN(numarAles))
+            {
+                window.alert("Va rog introduceti un numar valid")
+                return
+            }
+            
+            
+            
+            while (true)
+            {
+                if (numarAles === numar)
+                {
+                    document.getElementById("output").textContent="Felicitari! Numarul a fost ghicit."
+                    break
+                }else
+                {
+                    document.getElementById("output").textContent="Din pacate numarul nu a fost ghicit."
+                    break
+
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<!-- Exercițiul 7: Joc simplu - ghicește numărul
+Folosește Math.random, while, și onclick pentru a crea un joc. Calculatoarul alege un număr între 1 și 10, iar utilizatorul încearcă să-l ghicească. -->

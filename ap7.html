@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <button type="button" onclick="calculeaza('+')">Adunare</button>
+    <button type="button" onclick="calculeaza('-')">Scadere</button>
+    <button type="button" onclick="calculeaza('*')">Inmultire</button>
+    <button type="button" onclick="calculeaza('/')">Impartire</button>
+    <p id="output"></p>
+
+    <script>
+
+        function calculeaza(operator)
+        {
+            num1=parseFloat(document.getElementById("num1").value)
+            num2=parseFloat(document.getElementById("num2").value)
+
+            if (operator === "+")
+            {
+                rezultat=num1+num2
+                document.getElementById("output").textContent=rezultat
+            }
+
+            if (operator === "-")
+            {
+                rezultat=num1-num2
+                document.getElementById("output").textContent=rezultat
+            }
+
+            if (operator === "*")
+            {
+                rezultat=num1 * num2
+                document.getElementById("output").textContent=rezultat
+            }
+
+            if (operator === "/")
+            {
+                rezultat=num1 / num2
+                document.getElementById("output").textContent=rezultat
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- Exercițiul 4: Calculator simplu cu onclick
+Creează un mini-calculator care efectuează adunare, scădere, înmulțire și împărțire folosind onclick. -->

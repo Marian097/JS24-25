@@ -3,21 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ascunde sau Afișează Text</title>
+  <title>Matrice 3x4</title>
 </head>
 <body>
 
-  <p id="text" style="display: block;">Acesta este textul care va fi ascuns sau afișat.</p>
-  <button onclick="toggleText()">Ascunde/Afișează Text</button>
+  <h2>Matrice 3x4</h2>
+  <p id="arrayOutput"></p>
+  <p id="evenCheck"></p>
 
   <script>
-    function toggleText() {
-      var textElement = document.getElementById('text');
-      if (textElement.style.display === 'none') {
-        textElement.style.display = 'block';
-      } else {
-        textElement.style.display = 'none';
+    // Declarăm array-ul 3x4
+    var myArray = new Array(
+      [1, 2, 3, 4], 
+      [5, 6, 7, 8], 
+      [9, 10, 11, 12]
+    );
+
+    // Afișăm array-ul în document
+    var arrayOutput = document.getElementById('arrayOutput');
+    arrayOutput.innerHTML = 'Array-ul este: <br>';
+    for (var i = 0; i < myArray.length; i++) {
+      arrayOutput.innerHTML += myArray[i].join(' ') + '<br>';
+    }
+
+    // Verificăm dacă matricea conține numere pare
+    var containsEven = false;
+    var evenCheck = document.getElementById('evenCheck');
+    
+    for (var i = 0; i < myArray.length; i++) {
+      for (var j = 0; j < myArray[i].length; j++) {
+        if (myArray[i][j] % 2 === 0) {
+          containsEven = true;
+          break;
+        }
       }
+      if (containsEven) break;
+    }
+
+    // Afișăm un mesaj dacă matricea conține numere pare
+    if (containsEven) {
+      evenCheck.innerHTML = "Matricea conține cel puțin un număr par.";
+    } else {
+      evenCheck.innerHTML = "Matricea nu conține numere pare.";
     }
   </script>
 
@@ -25,6 +52,8 @@
 </html>
 
 
-<!-- Buton pentru ascunderea unui text: Creează un buton care, atunci când este
-apăsat, ascunde sau afișează un text pe pagină (folosind display: none sau
-display: block). -->
+<!-- 3. Declarati un array de 3×4 folosind codul de creare a unui vector. Practic,
+array-ul este de fapt format din 3 array-uri de cate 4 valori fiecare. var
+myArray = new Array(); Populati matricea cu valori. Afisati array-ul in
+documentul vostru. Verificati daca matricea contine numere pare și afisati un
+mesaj corespunzător. -->
