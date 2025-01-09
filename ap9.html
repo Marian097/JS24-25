@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Introduceti parola</h2>
+    <p><input type="password" name="pass" id="pass" oninput="login()"></p>
+    <p id="output"></p>
+
+    <script>
+        function login()
+        {
+            const pass=document.getElementById("pass").value;
+            const contineCifra = /\d/.test(pass);
+            const contineLiteraMare = /[A-Z]/.test(pass)
+
+            if (pass.length < 8)
+            {
+                document.getElementById("output").textContent="Parola trebuie sa contina cel putin 8 caractere"
+            }else if (!contineCifra)
+            {
+                document.getElementById("output").textContent="Parola trebuie sa contina cel putin o cifra"
+            }else if (!contineLiteraMare)
+            {
+                document.getElementById("output").textContent="Parola trebuie sa contina cel putin o litera mare"
+            }
+            else{
+                document.getElementById("output").textContent="Parola valida!"
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+
+<!-- Exercițiul 6: Validare parolă cu oninput
+Creează un câmp de input pentru parolă. Validează:
+
+Lungimea minimă să fie 8 caractere.
+Să conțină cel puțin o cifră.
+Să conțină cel puțin o literă mare. -->
