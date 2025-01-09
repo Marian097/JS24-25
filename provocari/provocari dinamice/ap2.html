@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="text" id="text" onkeyup="numaraCaractere()">
+    <p id="output"></p>
+    <script>
+        function numaraCaractere()
+        {
+            const text=document.getElementById("text").value;
+            document.getElementById("output").textContent=`Ati introdus ${text.length} caractere`
+        }
+    </script>
+    
+</body>
+</html>
+
+<!-- Exercițiul 2: Numără apăsările de taste
+Creează un input și folosește onkeyup pentru a număra câte caractere a introdus utilizatorul până acum. -->

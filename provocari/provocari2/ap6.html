@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+    <label for="numar">Numar</label>
+    <input type="text" name="number" id="number">
+    <button type="button" id="button">Verifica</button>
+</form>
+<p id="output"></p>
+    <script>
+
+        const input=document.getElementById("number")
+        const button=document.getElementById("button")
+        const output=document.getElementById("output")
+
+        button.onclick=function verificare(){
+            let numar = input.value
+            numar = Number(numar)
+            if (numar > 10)
+            {
+                output.innerHTML="Numarul este mai mare decat 10"
+
+            }
+            else{
+                output.innerHTML="Numarul este mai mic sau egal decat 10"
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!-- 5. Verificarea unui număr mai mare decât 10
+Creează un formular în care utilizatorul poate introduce un număr.
+Când butonul este apăsat, verifică dacă numărul introdus este mai mare de 10 și afișează un mesaj corespunzător (de
+exemplu, „Numărul este mai mare decât 10” sau „Numărul este mai mic sau egal cu 10”). -->

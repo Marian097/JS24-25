@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function estePrim(numar)
+        {
+            if (numar < 2)
+            {
+                return false
+            }
+
+            for (let i=2; i<numar; i++)
+            {
+                if (numar % i === 0 )
+                {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(estePrim(7))
+    </script>
+</body>
+</html>
+
+<!-- Exercițiul 3: Numere prime cu for și if
+Scrie o funcție care verifică dacă un număr este prim. Folosește:
+
+for pentru a verifica dacă numărul poate fi împărțit la alt număr în afară de 1 și el însuși.
+if pentru a decide dacă este prim sau nu. -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="output"></p>
+    <script>
+        let verificareNr = false
+        var myArray = new Array(
+            [3, 10, 25],
+            [8, 29, 31],
+            [1, 27, 50]
+        )
+
+        let numar = parseInt(window.prompt("Va rog sa introduceti un numar: ",))
+
+        for (let i = 0; i < myArray.length; i++) {
+            for (let j = 0; j < myArray[i].length; j++) {
+                if (numar === myArray[i][j]) {
+                    verificareNr = true
+                    console.log(`Numărul ${numar} este în linia ${i + 1}, coloana ${j + 1}.`);
+                    break
+                }
+            }
+            if(verificareNr)
+            {
+                break
+            }
+        }
+
+        if (verificareNr) {
+            document.getElementById("output").textContent = `Numărul ${numar} se află în matrice.`;
+        } else {
+            document.getElementById("output").textContent = `Numărul ${numar} nu se află în matrice.`;}
+
+       
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 1. Căutare într-un array bidimensional
+Declară un array bidimensional (ex. 3x3) care conține valori numerice între 1 și 50.
+Creează un input în care utilizatorul poate introduce un număr.
+Verifică dacă numărul introdus de utilizator există în array.
+Dacă există, afișează poziția lui (ex. "Numărul X se află în linia 1, coloana 2").
+Dacă nu există, afișează un mesaj corespunzător ("Numărul nu se află în matrice"). -->

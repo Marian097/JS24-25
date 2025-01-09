@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Exercitii array</h2>
+    <p id="output"></p>
+    <h3>Numerele pare din sir, sunt:</h3>
+    <p id="output2"></p>
+    <script>
+        
+        var myArray = new Array(
+            [102, 101, 50, 28],
+            [33, 1, 4, 80],
+            [111, 2, 3, 1000],
+            [224, 1054, 2025, 31],
+        )
+
+
+        document.getElementById("output").textContent = JSON.stringify(myArray, null, 2);
+        let nrPar=[]
+
+        for (number in myArray)
+        {
+
+            if (myArray[number][0] % 2 === 0)
+            {
+                nrPar.push(myArray[number][0])
+            }
+            if (myArray[number][1] % 2 === 0)
+            {
+                nrPar.push(myArray[number][1])
+            }
+            if (myArray[number][2] % 2 === 0)
+            {
+                nrPar.push(myArray[number][2])
+            }
+            if (myArray[number][3] % 2 === 0)
+            {
+                nrPar.push(myArray[number][3])
+            }
+
+        }
+
+        console.log(nrPar)
+
+        document.getElementById("output2").textContent=nrPar
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 3. Declarati un array de 3×4 folosind codul de creare a unui vector. Practic, array-ul este de fapt format din 3
+array-uri de cate 4 valori fiecare. var myArray = new Array(); Populati matricea cu valori. Afisati array-ul in
+documentul vostru. Verificati daca matricea contine numere pare și afisati un mesaj corespunzător. -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+        <label for="color">Introduceti culoarea dorita</label>
+        <input type="text" id="text">
+        <button type="button" id="button">Schimba culoare</button>
+        <div>
+            <p id="color">Paragraf</p>
+        </div>
+
+    <script>
+        const button=document.getElementById("button")
+        const input=document.getElementById("text")
+
+        button.onclick = function changeColor()
+        {
+            const color=document.getElementById("color")
+            if ( input.value == "yellow")
+            {
+                color.style.color="yellow"
+            }
+
+            if (input.value == "red")
+            {
+                color.style.color="red"
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
+<!-- 
+Exercițiul 9: Schimbarea culorii unui element
+Descriere: Creează un buton care, la apăsare, schimbă culoarea unui element de pe pagină (ex: un paragraf, un div etc.). -->

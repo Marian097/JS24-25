@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="random">Apasa-ma</button>
+    <p id="output"></p>
+    <script>
+
+        const button=document.getElementById("random")
+        const output = document.getElementById("output")
+
+        button.onclick=function (){
+            let nrMin=1
+            let nrMax=10
+           let nrAleatroiu = Math.floor(Math.random() * (nrMax - nrMin + 1)) +nrMin;
+           output.innerHTML = nrAleatroiu
+           console.log(`${nrAleatroiu}`)
+
+        }
+
+    </script>
+</body>
+</html>
+
+
+<!-- 4. Afișarea unui mesaj pe baza unui număr aleatoriu
+Creează un buton care generează un număr aleatoriu între 1 și 10.
+Dacă numărul generat este mai mare de 5, afișează un mesaj „Succes!”, iar dacă este mai mic sau egal cu 5, afișează „Mai încearcă”. -->

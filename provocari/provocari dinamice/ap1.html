@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Va rog introduceti un numar: <input type="number" name="num" id="num" oninput="verificaParitate()" ></p>
+    <p id="output"></p>
+    <script>
+        function verificaParitate()
+        {
+            const numar=document.getElementById("num").value;
+            if (numar % 2 === 0)
+            {
+                document.getElementById("output").textContent="Numarul este par"
+            }
+            else
+            {
+                document.getElementById("output").textContent="Numarul este impar"
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<!-- Exercițiul 1: Verifică numere pare/impare
+Creează un input în care utilizatorul poate introduce un număr, iar apoi:
+
+Dacă utilizatorul tastează un număr (eveniment oninput), să afișezi dacă este par sau impar.
+Folosește if-else și operatorul modulo (%). -->

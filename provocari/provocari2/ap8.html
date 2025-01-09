@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="text" id="text">
+        <button type="button" id="button">Concateneaza</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+        const button=document.getElementById("button")
+        const text = document.getElementById("text")
+        const output = document.getElementById("output")
+    
+
+        button.onclick=function concatenare()
+        {
+            let mesaj=text.value
+            let rezultat=(`Ati introdus: ${mesaj}`)
+            output.innerHTML = rezultat
+            
+        }
+    </script>
+    
+</body>
+</html>
+<!-- 
+7. Concatenarea unui text
+Creează un formular cu un câmp de text și un buton.
+La apăsarea butonului, concatenează valoarea introdusă cu un text fix, de exemplu: "Ai introdus: [valoarea introdusă]". -->
