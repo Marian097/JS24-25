@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+
+        tbody tr td {
+            border: 2px solid black;
+            width: 200px;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <h2>Array + Table</h2>
+        <tbody>
+            <tr>
+                <td id="row1" class="row"></td>
+            </tr>
+            <tr>
+                <td id="row2" class="row"></td>
+            </tr>
+            <tr>
+                <td id="row3" class="row"></td>
+            </tr>
+            <tr>
+                <td id="row4" class="row"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="output"></p>
+    <script>
+        var myArray = new Array(
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"],
+            ["I", "J", "K", "L"],
+            ["M", "N", "O", "P"],
+        )
+
+        for (let i=0; i< myArray.length; i++)
+        {
+            document.getElementById("row1").textContent=document.write(`<button>${myArray.length[0]}</button>`)
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- 2. Generarea și afișarea unui tabel
+Declară un array bidimensional de 4x4 care conține litere (ex. ["A", "B", "C", ...]).
+Afișează acest array sub formă de tabel HTML folosind JavaScript (poți folosi un element <table>).
+Fiecare literă afișată trebuie să fie un buton.
+Când utilizatorul apasă pe un buton, afișează litera corespunzătoare într-un <p> (ex. "Ai apăsat pe litera A"). -->
