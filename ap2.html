@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="paragraf"></p>
+<body>
+
+    <script>
+        function createButton(numar)
+        {
+            for (let i = 0; i<=numar; i++)
+            {
+                const button=document.createElement("button")
+
+                button.textContent=`Button${i}`
+
+
+                button.addEventListener("click", function(){
+                    document.getElementById("paragraf").textContent=`Ai apasat butonul${i}`
+                });
+                document.body.appendChild(button)
+            }
+            
+        }
+
+        createButton(3)
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 2. Creează mai multe butoane cu funcții diferite
+Scrie o funcție care creează un număr dat de butoane. Fiecare buton trebuie să afișeze un text unic (Buton 1, Buton 2,
+etc.) și să aibă un eveniment onclick care afișează un mesaj în consolă specific acelui buton. -->

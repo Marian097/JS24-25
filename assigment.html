@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="number" name="num1" id="num1"></p>
+    <p><input type="number" name="num2" id="num2"></p>
+    <button id="adunare" onclick="calculeaza('+')">+</button>
+    <button id="scadere" onclick="calculeaza('-')">-</button>
+    <button id="inmultire" onclick="calculeaza('*')">x</button>
+    <button id="impartire" onclick="calculeaza('/')">/</button>
+    <p id="rezultat"></p>
+
+    <script>
+         function calculeaza(operator)
+        {
+            var nr1=parseFloat(document.getElementById("num1").value);
+            var nr2=parseFloat(document.getElementById("num2").value);
+            let rezultat;
+
+
+            switch (operator){
+                case "+":
+                rezultat=nr1 + nr2;
+                break
+
+                case "-":
+                rezultat=nr1 - nr2;
+                break
+
+                case "*":
+                rezultat=nr1 * nr2;
+                break
+
+                case "/":
+                rezultat=nr1 / nr2;
+                break
+            }
+            document.getElementById("rezultat").textContent=`Rezultat: ${rezultat}`;
+
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<!-- 
+Exerciţiu
+Este necesar să se creeze un program JavaScript pentru efectuarea operațiilor principale de calcul: adunarea, scăderea, înmulțirea și împărţirea. Programul trebuie să funcționeze în felul următor. Utilizatorul introduce trei date: primul număr, operația și al doilea număr. Pe baza datelor introduse, este necesar să se determine care operație trebuie efectuată și apoi să se efectueze calculul. Rezultatul poate fi afișat într-un document HTML sau în cadrul ferestrei modale pentru vizualizarea mesajelor.
+
+Operațiile de calcul care trebuie efectuate sunt definite de caracterele +, -, *, /. 
+
+Fiecare din cele trei intrări ale programului poate fi descărcată într-o fereastră modală separată pentru descărcarea valorilor.
+
+Un exemplu de utilizare a unui program ar arăta astfel:
+
+utilizatorul introduce 3
+
+utilizatorul introduce +
+
+utilizatorul introduce 10
+
+programul transmite un mesaj  13 -->

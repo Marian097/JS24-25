@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createUl(array){
+
+            let ul=document.createElement("ul");
+            array.forEach(element => {
+                let li =document.createElement("li");
+                li.textContent=element
+                ul.appendChild(li)
+
+            });
+            document.body.appendChild(ul)
+        }
+
+
+        createUl(["mere", "pere", "nuci"])
+    </script>
+    
+</body>
+</html>
+
+<!-- 1. Creează o listă neordonată cu elemente date dintr-un array
+Scrie o funcție care primește un array de string-uri și creează o listă neordonată (<ul>). Fiecare string din array devine un element <li> din listă. -->
