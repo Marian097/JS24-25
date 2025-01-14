@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createColorGrid(randuri, coloane){
+            const grila=document.createElement("div")
+
+            for (let i = 0; i < randuri; i++)
+            {
+                let row=document.createElement("div");
+                
+                for (let j = 0; j < coloane; j++ )
+                {
+                    let cell=document.createElement("div");
+                    let button=document.createElement("button");
+                    button.textContent = "Schimba culoare"
+                    cell.appendChild(button)
+                    row.appendChild(cell)
+                    grila.appendChild(row)
+
+                    button.addEventListener("click", function () {
+                        let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16); // Generează o culoare aleatorie
+                        cell.style.backgroundColor = randomColor;})
+                }
+
+            }document.body.appendChild(grila)
+        }
+
+        createColorGrid(3, 5)
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- Exercițiul 2: Creează o grilă cu butoane care schimbă culorile
+Scrie o funcție care creează o grilă de dimensiuni date (rânduri × coloane), unde fiecare celulă conține un buton. Când
+apeși butonul dintr-o celulă, culoarea celulei respective trebuie să se schimbe aleator.
+
+Cerințe:
+
+Creează o funcție createColorGrid(rows, columns).
+Fiecare celulă trebuie să fie un <div> cu un buton în interior.
+    La apăsarea unui buton, culoarea celulei (elementul <div>) se schimbă într-o culoare aleatorie. Folosește funcția
+        Math.random() pentru a genera culorile. -->

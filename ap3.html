@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function createElement(rows, columns){
+            let grila=document.createElement("div");
+            grila.classList.add("myclass");
+            let count=1;
+            for (let i=0; i<rows; i++)
+            {
+                let row = document.createElement("div");
+                row.style.display="flex"
+
+                for (let j = 0; j < columns; j++)
+                {
+                    let cell=document.createElement("div");
+                    cell.textContent=`Celula${count}`;
+                    count++;
+
+                    cell.style.border="1px solid black;"
+                    
+                    row.appendChild(cell);
+
+                }
+                grila.appendChild(row)
+            }document.body.appendChild(grila)
+            
+        }
+
+
+        createElement(2, 4)
+    </script>
+
+</body>
+
+</html>
+
+<!-- 3. Creează o grilă de elemente (div-uri)
+Scrie o funcție care creează o grilă de elemente <div>. Grila trebuie să aibă un număr specific de rânduri și coloane,
+specificate ca parametri. Fiecare celulă va avea un text unic, precum "Celulă 1", "Celulă 2", etc. -->

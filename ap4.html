@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createList(number)
+        {
+            let ul=document.createElement("ul");
+            let count=1;
+
+            for (let i=0; i< number; i++)
+            {
+                let li=document.createElement("li");
+                let button = document.createElement("button");
+                button.textContent="Sterge";
+                li.textContent=`Element${count}`
+                count++
+                li.append(button)
+                ul.appendChild(li)
+                button.addEventListener("click", function(){
+                    if (button)
+                    {
+                        li.remove()
+
+                    }
+                })
+
+            }document.body.appendChild(ul)
+
+
+        }
+
+        createList(3)
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- Exercițiul 1: Creează o listă interactivă
+Scrie o funcție care creează o listă <ul> cu un anumit număr de elemente <li>. Fiecare element de listă trebuie să
+        conțină un text unic și un buton "Șterge" care elimină elementul respectiv din listă atunci când este apăsat.
+
+        Cerințe:
+
+        Creează o funcție createInteractiveList(count) unde count reprezintă numărul de elemente din listă.
+        Fiecare
+    <li> trebuie să conțină textul unic (de exemplu, "Element 1", "Element 2", etc.).
+        Fiecare
+    <li> trebuie să aibă un buton "Șterge". Când apeși butonul, elementul respectiv este eliminat din listă. -->
