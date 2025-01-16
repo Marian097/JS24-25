@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const table = document.createElement("table")
+        const tr = document.createElement("tr")
+        const td = document.createElement("td")
+        td.textContent="Primul meu tabel"
+
+        tr.appendChild(td)
+        table.appendChild(tr)
+
+        document.body.appendChild(table)
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- Exercițiul 1: Crearea unui tabel cu un singur rând și o singură celulă
+Crează un tabel simplu care conține un singur rând și o singură celulă cu textul "Primul meu tabel".
+
+Pas de urmat:
+
+Crează un element <table>.
+Crează un rând <tr>.
+Crează o celulă <td> și adaugă textul "Primul meu tabel".
+Adaugă acest rând în tabel.
+Adaugă tabelul în corpul paginii HTML. -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myArray=new Array 
+        (
+            ["Celula_1", "Celula_2"],
+            ["Celula_3", "Celula_4"]
+        )
+
+        function creazaTabel(array)
+        {
+            let table = document.createElement("table")
+            table.style.border="2px solid black";
+            table.style.borderCollapse="collapse"
+            array.forEach(row => {
+                let tr = document.createElement("tr");
+                row.forEach(cell => {
+                    let td = document.createElement("td");
+                    td.textContent = cell
+                    td.style.border="2px solid black"
+                    
+                    tr.appendChild(td)
+
+                });
+                table.appendChild(tr)
+            });document.body.appendChild(table)
+        }
+
+        creazaTabel(myArray)
+    </script>
+    
+</body>
+</html>
+
+<!-- Exercițiul 3: Adăugarea unui text într-o celulă
+Crează un tabel de dimensiuni 2x2, unde:
+
+Primul rând conține textul "Celulă 1" și "Celulă 2".
+Al doilea rând conține textul "Celulă 3" și "Celulă 4".
+Pas de urmat:
+
+Crează un tabel cu două rânduri.
+Adaugă textul corespunzător în fiecare celulă. -->

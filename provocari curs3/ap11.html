@@ -10,50 +10,82 @@
             text-align: center;
         }
 
-        tbody tr td {
+       tbody tr td {
             border: 2px solid black;
             width: 200px;
+            height: 50px;
         }
 
         table {
             border-collapse: collapse;
             text-align: center;
         }
+
+        button {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 
 <body>
     <table>
-        <h2>Array + Table</h2>
+        <h2>Array sub forma de tabel</h2>
         <tbody>
             <tr>
-                <td id="row1" class="row"></td>
+                <td><button id="b1" onclick="afiseaza('A')">A</button></td>
+                <td><button id="b2" onclick="afiseaza('B')">B</button></td>
+                <td><button id="b3" onclick="afiseaza('C')">C</button></td>
+                <td><button id="b4" onclick="afiseaza('D')">D</button></td>
             </tr>
             <tr>
-                <td id="row2" class="row"></td>
+                <td><button id="b5" onclick="afiseaza('E')">E</button></td>
+                <td><button id="b6" onclick="afiseaza('F')">F</button></td>
+                <td><button id="b7" onclick="afiseaza('G')">G</button></td>
+                <td><button id="b8" onclick="afiseaza('H')">H</button></td>
             </tr>
             <tr>
-                <td id="row3" class="row"></td>
+                <td><button id="b9" onclick="afiseaza('I')">I</button></td>
+                <td><button id="b10" onclick="afiseaza('J')">J</button></td>
+                <td><button id="b11" onclick="afiseaza('K')">K</button></td>
+                <td><button id="b12"onclick="afiseaza('L')">L</button></td>
             </tr>
             <tr>
-                <td id="row4" class="row"></td>
+                <td><button id="b13" onclick="afiseaza('M')">M</button></td>
+                <td><button id="b14" onclick="afiseaza('N')">N</button></td>
+                <td><button id="b15" onclick="afiseaza('O')">O</button></td>
+                <td><button id="b16" onclick="afiseaza('P')">P</button></td>
             </tr>
         </tbody>
     </table>
 
     <p id="output"></p>
     <script>
-        var myArray = new Array(
-            ["A", "B", "C", "D"],
-            ["E", "F", "G", "H"],
-            ["I", "J", "K", "L"],
-            ["M", "N", "O", "P"],
-        )
+            var myArray = new Array(
+                ["A", "B", "C", "D"],
+                ["E", "F", "G", "H"],
+                ["I", "J", "K", "L"],
+                ["M", "N", "O", "P"]
+            )
 
-        for (let i=0; i< myArray.length; i++)
-        {
-            document.getElementById("row1").textContent=document.write(`<button>${myArray.length[0]}</button>`)
-        }
+            var $array=[]
+
+
+            for ( let i = 0; i < myArray.length; i++)
+            {
+                for (let j = 0; j< myArray[i].length; j++)
+                {
+                    $array.push(myArray[i][j])
+                }
+
+            }console.log($array)
+
+            function afiseaza(button){
+                document.getElementById("output").textContent = button;
+            }
+
+
+
     </script>
 
 </body>

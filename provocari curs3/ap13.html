@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var myArray = new Array(
+            ["Rand1"],
+            ["Rand2"]
+        )
+
+        function creazaTabel(array)
+        {
+            let table = document.createElement ("table")
+            table.style.border="2px solid black";
+            table.style.borderCollapse="collapse";
+            array.forEach(row => {
+                let tr = document.createElement("tr");
+                row.forEach(cell => {
+                    let td = document.createElement("td");
+                    td.style.border="2px solid black";
+                    td.textContent=cell
+                    tr.appendChild(td)
+
+                }); table.appendChild(tr)
+            });
+            document.body.appendChild(table)
+        }
+
+        creazaTabel(myArray)
+    </script>
+    
+</body>
+</html>
+
+<!-- Exercițiul 2: Crearea unui tabel cu două rânduri
+Crează un tabel cu două rânduri, fiecare conținând câte o celulă cu textul "Rând 1" și respectiv "Rând 2".
+
+Pas de urmat:
+
+Crează un tabel.
+Adaugă două rânduri, fiecare conținând o celulă cu textul corespunzător. -->

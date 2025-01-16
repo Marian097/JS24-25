@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var myArray = new Array (
+            [1, 2],
+            [3, 4]    
+        )
+
+        function creazaTabel(array)
+        {
+            let table = document.createElement("table")
+            table.style.border="2px solid black"
+            table.style.borderCollapse="collapse"
+            array.forEach(row => {
+                let tr = document.createElement("tr");
+                row.forEach(cell => {
+                    let td = document.createElement ("td")
+                    td.style.border="2px solid black";
+                    td.style.width="200px";
+                    td.style.height="50px";
+                    td.textContent=cell
+                    tr.appendChild(td)
+                });
+                table.appendChild(tr)
+            });document.body.appendChild(table)
+        }
+
+        creazaTabel(myArray)
+    </script>
+    
+</body>
+</html>
+
+<!-- Exercițiul 4: Modificarea textului unei celule
+După ce ai creat un tabel simplu cu două rânduri și două coloane, modifică textul din celula de pe prima linie și prima coloană astfel încât să afișeze "Tabelul meu".
+
+Pas de urmat:
+
+Creează un tabel cu 2 rânduri și 2 coloane.
+Modifică textul primei celule din tabel. -->
+
+
+
+<!-- https://chatgpt.com/c/67827223-f38c-8012-8930-a9be36e3f212 -->
