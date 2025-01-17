@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArray=[45, 2, 33, 78, 4, 56]
+        let nrMin=myArray[0]
+        let nrMax=myArray[0]
+
+        for ( let i = 1; i < myArray.length; i++)
+        {
+            if (myArray[i] < nrMin)
+            {
+                nrMin=myArray[i]
+            }
+
+            if (myArray[i] > nrMax)
+            {
+                nrMax=myArray[i]
+            }
+
+        }
+        console.log(nrMin)
+        console.log(nrMax)
+    </script>
+    
+</body>
+</html>
+
+<!-- 2. Găsește minimul și maximul
+Creează un script care găsește cel mai mic și cel mai mare număr din array-ul [45, 2, 33, 78, 4, 56]. -->

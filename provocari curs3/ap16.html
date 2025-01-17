@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function drawTags(nameTag, styleTag, contentTag, repetition=1){
+           
+            for (let i = 0; i < repetition; i++ )
+            {
+                let tag=document.createElement(nameTag);
+                if (styleTag)
+                {
+                    tag.style.cssText=styleTag;
+                }
+                tag.textContent=contentTag;
+                document.body.appendChild(tag);
+            }
+        }
+
+
+        drawTags("div", "border: 1px solid red; background-color: yellow; color: red; margin: 4px; padding: 4px", "Salut")
+        
+    </script>
+
+</body>
+
+</html>
+
+<!-- 4.Scrieti o functie care va desena un tag conform parametrilor dati. Parametrii sunt: denumirea tagului, stilul,
+continutul tagului si numarul de repetitii. Daca nu se insereaza numarul de repetitii, tagul trebuie desenat cel putin o
+data. • Exemplu: drawTags("div","border: 1px solid red; background-color: yellow; color: red; margin: 4px; padding:
+4px;",“Salut!",2); -->

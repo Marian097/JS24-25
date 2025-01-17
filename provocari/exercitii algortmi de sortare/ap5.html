@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const myArray=[12, 7, 5, 8, 19, 24, 3]
+
+        const nrPare=[]
+        const nrImpare=[]
+
+        for ( let i = 0; i < myArray.length; i++)
+        {
+            if (myArray[i] % 2 === 0)
+            {
+                nrPare.push(myArray[i])
+            }
+            else
+            {
+                nrImpare.push(myArray[i])
+            }
+        }
+
+
+        console.log (`Array numere pare: ${nrPare}`)
+        console.log(`Array numere impare: ${nrImpare}`)
+    </script>
+
+</body>
+
+</html>
+
+<!-- 3. Numere pare și impare separate
+Scrie un algoritm care separă numerele pare de cele impare într-un array. Array-ul inițial este [12, 7, 5, 8, 19, 24,
+3]. Rezultatul ar trebui să fie două array-uri separate: unul pentru numere pare și unul pentru impare. -->
+
+
+<!-- https://chatgpt.com/c/6788cbd4-6900-8012-bcf2-8cfeef3089e3 -->
