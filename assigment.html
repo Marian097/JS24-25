@@ -17,28 +17,27 @@
     <script>
          function calculeaza(operator)
         {
-            var nr1=parseFloat(document.getElementById("num1").value);
-            var nr2=parseFloat(document.getElementById("num2").value);
+            let nr1=parseFloat(document.getElementById("num1").value);
+            let nr2=parseFloat(document.getElementById("num2").value);
             let rezultat;
-
-
-            switch (operator){
-                case "+":
-                rezultat=nr1 + nr2;
-                break
-
-                case "-":
-                rezultat=nr1 - nr2;
-                break
-
-                case "*":
-                rezultat=nr1 * nr2;
-                break
-
-                case "/":
-                rezultat=nr1 / nr2;
-                break
-            }
+                
+                switch (operator){
+                    case "+":
+                    rezultat=nr1 + nr2;
+                    break
+    
+                    case "-":
+                    rezultat=nr1 - nr2;
+                    break
+    
+                    case "*":
+                    rezultat=nr1 * nr2;
+                    break
+    
+                    case "/":
+                    rezultat=nr1 / nr2;
+                    break
+                }
             document.getElementById("rezultat").textContent=`Rezultat: ${rezultat}`;
 
         }

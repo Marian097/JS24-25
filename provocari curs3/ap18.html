@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function genereazaClasament()
+        {
+            const echipe = [
+				{ "echipa": "FCSB", "victorii": 10, "egaluri": 5, "infrangeri": 3 },
+				{ "echipa": "CFR Cluj", "victorii": 9, "egaluri": 7, "infrangeri": 2 },
+				{ "echipa": "Universitatea Craiova", "victorii": 8, "egaluri": 6, "infrangeri": 4 },
+				{ "echipa": "Rapid București", "victorii": 7, "egaluri": 8, "infrangeri": 3 },
+				{ "echipa": "Farul Constanța", "victorii": 6, "egaluri": 6, "infrangeri": 6 },
+				{ "echipa": "Sepsi Sfântu Gheorghe", "victorii": 5, "egaluri": 7, "infrangeri": 6 },
+				{ "echipa": "Dinamo București", "victorii": 4, "egaluri": 6, "infrangeri": 8 },
+				{ "echipa": "Petrolul Ploiești", "victorii": 4, "egaluri": 5, "infrangeri": 9 },
+				{ "echipa": "Voluntari", "victorii": 3, "egaluri": 6, "infrangeri": 9 },
+				{ "echipa": "Hermannstadt", "victorii": 2, "egaluri": 8, "infrangeri": 8 },
+				{ "echipa": "Oțelul Galați", "victorii": 1, "egaluri": 8, "infrangeri": 9 },
+				{ "echipa": "U Cluj", "victorii": 14, "egaluri": 4, "infrangeri": 0 },
+				{ "echipa": "FC Botoșani", "victorii": 0, "egaluri": 18, "infrangeri": 0 },
+				{ "echipa": "Poli Iași", "victorii": 0, "egaluri": 0, "infrangeri": 18 },
+				];
+
+                echipe.forEach(obj =>{
+                    let puncte = obj["victorii"] * 3 + obj["egaluri"] * 1;
+                    obj.punctaj = Number(puncte)
+                });
+
+                echipe.sort(function (a, b)
+                {
+                    if (b.punctaj === a.punctaj)
+                    {
+                        return b.victorii - a.victorii;
+                    }
+                    return b.punctaj - a.punctaj;
+                })
+
+                console.log(echipe)
+
+        }
+        genereazaClasament()
+    </script>
+</body>
+</html>
+<!-- 6. Scrieti o functie care sa genereze clasamentul echipelor de fotbal din Liga I.
+Date de intrare :
+
+			
+				// Echipele și punctajele lor
+				const echipe = [
+				{ "echipa": "FCSB", "victorii": 10, "egaluri": 5, "infrangeri": 3 },
+				{ "echipa": "CFR Cluj", "victorii": 9, "egaluri": 7, "infrangeri": 2 },
+				{ "echipa": "Universitatea Craiova", "victorii": 8, "egaluri": 6, "infrangeri": 4 },
+				{ "echipa": "Rapid București", "victorii": 7, "egaluri": 8, "infrangeri": 3 },
+				{ "echipa": "Farul Constanța", "victorii": 6, "egaluri": 6, "infrangeri": 6 },
+				{ "echipa": "Sepsi Sfântu Gheorghe", "victorii": 5, "egaluri": 7, "infrangeri": 6 },
+				{ "echipa": "Dinamo București", "victorii": 4, "egaluri": 6, "infrangeri": 8 },
+				{ "echipa": "Petrolul Ploiești", "victorii": 4, "egaluri": 5, "infrangeri": 9 },
+				{ "echipa": "Voluntari", "victorii": 3, "egaluri": 6, "infrangeri": 9 },
+				{ "echipa": "Hermannstadt", "victorii": 2, "egaluri": 8, "infrangeri": 8 },
+				{ "echipa": "Oțelul Galați", "victorii": 1, "egaluri": 8, "infrangeri": 9 },
+				{ "echipa": "U Cluj", "victorii": 14, "egaluri": 4, "infrangeri": 0 },
+				{ "echipa": "FC Botoșani", "victorii": 0, "egaluri": 18, "infrangeri": 0 },
+				{ "echipa": "Poli Iași", "victorii": 0, "egaluri": 0, "infrangeri": 18 },
+				
+				]; -->

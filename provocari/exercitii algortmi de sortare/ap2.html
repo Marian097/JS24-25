@@ -7,24 +7,24 @@
 </head>
 <body>
     <script>
-            
-        let array=[5, 3, 8, 6, 2]
+        var myArray=[5, 2, 9, 1, 5, 6, 11, 17, 21];
+        var len = myArray.length;
 
-        const LEN=array.length
-        let nrMin;
-
-        for ( let i = 0; i < LEN; i++)
+        for (var i = 0; i< len - 1; i++)
         {
-            console.log(LEN)
-
-
+            for (var j = 0; j< len - 1; j++ )
+            {
+                if (myArray[j] > myArray[j + 1])
+                {
+                    var temp = myArray[j];
+                    myArray[j] = myArray[j + 1];
+                    myArray[j + 1] = temp
+                }
+            }
         }
 
+        console.log(myArray);
     </script>
+    
 </body>
 </html>
-
-
-
-<!-- Input: [5, 3, 8, 6, 2]
-Output: [2, 3, 5, 6, 8] -->
