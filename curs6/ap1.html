@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function produsNou(nume, pret, stoc, dataFabricarii)
+        {
+            const obj ={};
+            obj.nume=nume;
+            obj.pret=pret;
+            obj.stoc=stoc;
+            obj.dataFabricarii=dataFabricarii;
+            obj.afiseaza=function(){
+                console.log(`Produsul ${obj.nume} costa ${obj.pret}`)
+                console.log(`Produsul ${this.nume} costa ${this.pret}`)   // => Face referire la produsul in sine(eobiectul curent). Putem sa folosim this in loc de obj
+            },
+
+            obj.cumpara=function()
+            {
+                if (this.stoc > 0)
+                {
+                    this.stoc -= 1; //=> Din stoc scadem 1.
+                    console.log(`Produsul ${this.nume} a fost adaugat in cos.`)
+                }
+            }
+            return obj
+
+        }
+
+        const paine = produsNou("Paine", 8, 36, "2020-02-22");
+        paine.afiseaza();
+        paine.cumpara();
+
+        const apa=produsNou("Borsec", 5, 35, "25-05-2025");
+        apa.afiseaza()
+        apa.cumpara()
+    
+    </script>
+</body>
+</html>

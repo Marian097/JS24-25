@@ -36,8 +36,5 @@ function showMovies(results, searchTerm='') {
     }
 });
 
-// linia 6 adaugam al doilea parametru seearchTerm
-// linia 7 adaugam al doilea parametru seearchTerm
-// adaugam if din app
 
 
