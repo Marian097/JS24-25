@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function generate(nColoane, nRanduri, culoare_1="yellow", culoare_2="purple")
+        {
+            let table=document.createElement("table");
+            table.style.borderCollapse="collapse";
+           
+            for (let i = 0; i < nRanduri; i++)
+            {
+                let tr = document.createElement("tr");
+                let culoare=(i % 2 === 0) ? culoare_1: culoare_2;
+                tr.style.backgroundColor = culoare;
+
+                for(let j = 0; j < nColoane; j++ )
+                {
+                    let td=document.createElement("td");
+                    td.style.border="1px solid black";
+                    td.width="30px";
+                    td.height="30px";
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+                }
+                
+
+            }document.body.appendChild(table);
+
+        }
+        generate(8, 8, "yellow", "purple");
+    </script>
+    
+</body>
+</html>
+
+<!-- 3. Tabel cu rânduri colorate alternativ
+Generează un tabel cu n rânduri și m coloane, în care fiecare rând să aibă o culoare de fundal alternantă (ex. alb, gri). -->

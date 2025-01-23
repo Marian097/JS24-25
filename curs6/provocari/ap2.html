@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Stundet (id, nume, varsta, nota1, nota2, media)
+        {
+            this.id=id;
+            this.nume=nume;
+            this.varsta=varsta;
+            this.nota1=nota1;
+            this.nota2=nota2;
+            this.media=media
+            this.salut=function()
+            {
+                alert(`Salutare. Numele meu este ${this.nume}.`)
+            }
+            this.calculeazaMedia=function()
+            {
+                if (nota1, nota2 > 2 && nota1, nota2 <=8)
+                {
+                    let punctSuplimentar=1;
+                    this.media=(this.nota1 + this.nota2) / 2;
+                    this.media += punctSuplimentar;
+                    
+                }
+                else
+                {
+                    this.media=(this.nota1 + this.nota2) / 2;
+                    
+
+                }
+            }
+            this.afiseazaMedia=function()
+            {
+                alert(`Media notelor ${this.nota1} si ${this.nota2} este: ${this.media}`)
+            }
+        }
+
+        const student = new Stundet(12, "Marian", 27, 4, 8)
+        student.calculeazaMedia()
+        student.afiseazaMedia()
+    </script>
+    
+</body>
+</html>
+
+<!-- Creează un constructor pentru un obiect **Student**, cu proprietățile `id`, `nume`, `varsta`, `nota1`, `nota2`, și `media`. Adaugă metode pentru:
+1. Salutare (afișează un mesaj cu numele studentului).
+2. Calcularea mediei notelor, cu o regulă care acordă un punct suplimentar la fiecare notă peste 2 (dar nu mai mare de 8).
+3. Afișarea mediei calculate. -->

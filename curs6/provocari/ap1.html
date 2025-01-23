@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Masina (marca, model, anFabricatie, motor, viteza) //=> Am creat o functie pentru masina care are ca parametrii propietatile obiectului Masina.
+        {
+            //=>Propietatile masinii.<=//
+            this.marca=marca;  
+            this.model=model;
+            this.anFabricatie=anFabricatie;
+            this.viteza=viteza;
+            this.motor=motor;
+            this.afiseaza = () => {
+                document.write(`Avem o masina marca: ${this.marca},  model: ${this.model} din anul ${this.anFabricatie} cu un motor ${this.motor} care poate ajunge pana la viteza de 
+                ${this.viteza} - 100 km/h in 10 minute.`); //=> Am creat metoda pentru a afisa detaliile masinii.
+            };
+            this.cresteViteza= () =>{    //=> Am creat metoda cresteViteza.
+
+                for (let i=0; i <100; i++) //=> Folosim un For unde verificam daca viteza este mai mica de 100, masina fiind oprita, daca este mai mic, pornim si acceleram
+                                           // => pana la 100 km.
+                {
+                    this.viteza++          // = > Acceleram masina.
+                    console.log(`${this.viteza} km/h`) //=> Afisam kilometrajul.
+                }
+            };
+
+            this.oprireMasina= ()=>{            //=> Am creat metoda oprireMasina.
+                for (let i = 100; i <= 100; i--) //=> Daca viteza este de 100 km/h, scadem treptat viteza si o oprim.
+                {
+                    if (i == 0)
+                    {
+                        console.log(`Masina este oprita: ${this.viteza} km/h`);
+                        break
+                    }
+                    
+                    console.log(`${this.viteza}`)
+                    this.viteza--
+                    
+                }
+            }
+
+
+
+        }
+
+        const masinaDacia= new Masina ("Dacia", "Logan", "2025", "0.99CM", 0);
+        masinaDacia.afiseaza()
+        masinaDacia.cresteViteza()
+        masinaDacia.oprireMasina()
+
+
+        const masinaMercedes = new Masina ("Mercedes", "S-Class", "3.0CM", "2025", 0);
+        masinaMercedes.afiseaza = function ()
+        {
+            document.write(`Avem o masina marca: ${this.marca},  model: ${this.model} din anul ${this.anFabricatie} cu un motor ${this.motor} care poate ajunge pana la viteza de 
+            ${this.viteza} - 300 km/h in 2sec.`);
+        }
+        masinaMercedes.afiseaza()
+    </script>
+    
+</body>
+</html>
+
+
+<!-- 1. Creează un obiect "Mașină"
+Scrie o clasă Masina cu următoarele proprietăți: marca, model, anFabricatie, viteza. Include metode pentru:
+
+Afișarea detaliilor mașinii.
+Creșterea vitezei cu o valoare specificată.
+Oprirea mașinii (setează viteza la 0). -->

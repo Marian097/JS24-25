@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateTable(randuri, coloane, culoare1="red", culoare2="black")
+        {
+            let table=document.createElement("table");
+            table.style.border="1px solid black";
+            table.style.borderCollapse="collapse";
+
+            for (let i = 0; i< randuri; i++)
+            {
+                let tr=document.createElement("tr");
+                tr.style.border="1px solid black";
+                for (let j = 0; j < coloane; j++)
+                {
+                    let td=document.createElement("td");
+                    td.style.border="1px solid black";
+                    td.height="30px";
+                    td.width="30px";
+                    let culoare = (i === j) ? culoare1: culoare2;
+                    td.style.backgroundColor=culoare;
+                    tr.appendChild(td);
+
+
+                }table.appendChild(tr);
+            }document.body.appendChild(table);
+        }
+
+        generateTable(8, 8, "red", "blue");
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+2. Tabel cu diagonala colorată
+Creează un tabel pătrat (ex. 8x8), în care celulele de pe diagonala principală să fie colorate diferit față de restul celulelor. -->

@@ -1,0 +1,86 @@
+
+<!-- 1. Tabel de scoruri dinamice
+Creează o aplicație care gestionează un tabel de scoruri pentru un joc.
+
+Poți adăuga jucători noi cu un scor inițial.
+Poți actualiza scorurile existente.
+Poți șterge un jucător.
+Poți sorta tabelul în funcție de scor (descrescător). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 { 
+            text-align: center;
+            font-size: 30px;
+        }
+        table {
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       
+        
+        function creazaTabel(player1, player2) {
+            // Inițializare array cu jucători
+            var arrayPlayer = [player1, player2];
+
+            // Creează tabelul
+            //let table = document.createElement("table");
+            let table=document.createElement("table");
+
+            // Adaugă titlul Score
+            let caption = document.createElement("caption");
+            caption.innerText = "Score";
+            caption.style.fontSize = "24px";
+            caption.style.fontWeight = "bold";
+            table.appendChild(caption)
+
+            // Creează rânduri pentru fiecare jucător
+            arrayPlayer.forEach(player => {
+                let tr = document.createElement("tr");
+
+                // Creează celula pentru numele jucătorului
+                let nameCell = document.createElement("td");
+                nameCell.textContent = player;
+                tr.appendChild(nameCell);
+
+                // Adaugă celule pentru scoruri (de exemplu, 10 celule)
+                for (let j = 0; j < 10; j++) {
+                    let scoreCell = document.createElement("td");
+                    scoreCell.textContent = ""; // Celula goală pentru scor
+                    tr.appendChild(scoreCell);
+                }
+
+                // Adaugă rândul în tabel
+                table.appendChild(tr);
+            });
+
+            // Adaugă tabelul în pagină
+            document.body.appendChild(table);
+            
+            return table;
+
+        }
+        // Apelează funcția pentru a crea tabelul
+        let table=creazaTabel("Marian", "Ion");
+
+        
+    </script>
+</body>
+</html>
+
+

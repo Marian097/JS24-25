@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Masina(marca, model, anFabricatie, motor, viteza) //=> Am creat o functie pentru masina care are ca parametrii propietatile obiectului Masina.
+        {
+            //=>Propietatile masinii.<=//
+            this.marca = marca;
+            this.model = model;
+            this.anFabricatie = anFabricatie;
+            this.viteza = viteza;
+            this.motor = motor;
+            this.afiseaza = function () {
+                document.write(`Avem o masina marca: ${this.marca},  model: ${this.model} din anul ${this.anFabricatie} cu un motor ${this.motor} care poate ajunge pana la viteza de 
+            ${this.viteza} - 100 km/h in 10 minute.`); //=> Am creat metoda pentru a afisa detaliile masinii.
+            };
+            this.cresteViteza = function () {    //=> Am creat metoda cresteViteza.
+
+                for (let i = 0; i < 100; i++) //=> Folosim un For unde verificam daca viteza este mai mica de 100, masina fiind oprita, daca este mai mic, pornim si acceleram
+                // => pana la 100 km.
+                {
+                    this.viteza++          // = > Acceleram masina.
+                    console.log(`${this.viteza} km/h`) //=> Afisam kilometrajul.
+                }
+            };
+
+            this.oprireMasina = function () {            //=> Am creat metoda oprireMasina.
+                for (let i = 100; i <= 100; i--) //=> Daca viteza este de 100 km/h, scadem treptat viteza si o oprim.
+                {
+                    if (i == 0) {
+                        console.log(`Masina este oprita: ${this.viteza} km/h`);
+                        break
+                    }
+
+                    console.log(`${this.viteza}`)
+                    this.viteza--
+
+                }
+            this.afiseazaConsum = function()
+                {
+                     if (this.motor == "electric")
+                    {
+                        console.log("Masina are motorul electric.")
+                        console.log("Consum electric 15kW/100km");
+
+                    }
+                    if (this.motor == "Benzina".toLowerCase)
+                    {
+                        console.log("Masina are motorul pe benzina.")
+                        console.log("Consum benzina 7l/100km");
+                    }
+                }
+            }
+
+
+
+        }
+
+        const masinaDacia = new Masina("Dacia", "Logan", "2025", "benzina", 0);
+        masinaDacia.afiseaza()
+        masinaDacia.cresteViteza()
+        masinaDacia.oprireMasina()
+        masinaDacia.afiseazaConsum()
+
+    </script>
+</body>
+
+</html>
+
+<!-- #### Exercițiul 3
+Extinde constructorul **Masina** din Exercițiul 2 pentru a adăuga:
+1. O metodă care verifică dacă mașina are motor electric (dacă `motor` conține "electric").
+2. O metodă care afișează consumul mediu în funcție de tipul de motor.
+   - Exemple: "benzină" -> 7L/100km, "electric" -> 15kWh/100km. -->

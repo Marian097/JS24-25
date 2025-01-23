@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateTable(n_randuri, n_coloane){
+
+            let table=document.createElement("table");
+            table.style.border="1px solid black";
+            table.style.borderCollapse="collapse";
+            let contor=1;
+
+            for (let i = 1; i< n_randuri; i++)
+            {
+                let tr=document.createElement("tr");
+                for (let j = 1; j < n_coloane; j++)
+                {
+                    let td=document.createElement("td");
+                    td.style.border="1px solid black";
+                    td.style.height="30px";
+                    td.style.width="30px";
+                    td.textContent= contor++;
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+
+                }
+
+            }document.body.appendChild(table);
+        }
+
+        generateTable(4, 5);
+    </script>
+    
+</body>
+</html>
+
+<!-- 1. Creează un tabel de numere crescătoare
+Generează un tabel cu n rânduri și m coloane, unde fiecare celulă conține un număr crescător începând de la 1. -->

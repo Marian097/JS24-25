@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiplicareTabel(rand)
+        {
+            let table=document.createElement("table");
+            table.style.borderCollapse="collapse";
+
+            for ( let i = 1; i <= rand; i++)
+            {
+                let tr=document.createElement("tr");
+                tr.style.border="1px solid black";
+                if (typeof rand =="number" && rand >= 0)
+                {
+                    let produs=rand * i;
+                    tr.textContent=`${i} x ${rand} = ${produs}`;
+
+                }
+                else
+                {alert("Va rog introduceti un numar valid.")}
+                
+                table.appendChild(tr)
+            }document.body.appendChild(table);
+        }
+
+        multiplicareTabel(10)
+    </script>
+    
+</body>
+</html>
+
+<!-- 5. Multiplicare în tabel
+Creează un tabel de 10x10, în care fiecare celulă să conțină produsul dintre numărul rândului și al coloanei (ex. tabelul înmulțirii). -->
+
+<!-- https://chatgpt.com/c/678e293c-d914-8012-a713-d60bf5d6dabf -->
