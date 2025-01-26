@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray = [10, 15, 20, 25, 75];
+        //Sa afisam preturile
+        myArray.forEach((preturi) =>{
+            document.write(`<br>Pretul este: <span> ${preturi} lei, </span>`)
+        });
+
+        //Sa modificam preturile cu 15%
+
+        let newArray = myArray.map((preturi) => (preturi * 1.15).toFixed(2)); // .map returneaza un newArray (un alt array).
+        document.write("<br><span>Noile preturi sunt: </span>");
+
+        newArray.forEach(preturi => {
+            document.write(`<br><span>${preturi}</span>`);
+        })
+
+
+
+    </script>
+</body>
+</html>

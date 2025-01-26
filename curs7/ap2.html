@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray = [5, 21, 3, 11, 7, 15, 26, 8];
+        myArray.push(2, 9);
+        myArray.pop()
+        myArray.shift() //=> Sterge elementul de la inceput
+        myArray.unshift() //=> Adauga element la inceputul sirului
+        console.log(myArray);
+        console.log(myArray.reverse());
+        console.log(myArray.sort(function(a, b){
+            return a - b;
+        }));
+
+        console.log(myArray.reverse());
+        console.log(myArray.slice(1, 4)); // => Sterge o bucatica din cod, de la indexul 1 pana la indexul 4 (inclusiv 4)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button" onclick="salut('Mihai')">Salut</button>
+    <script>
+        function salut(nume)
+        {
+            alert(`Buna seara ${nume}`)
+        }
+
+
+
+        function getName ()
+        {
+            let nume=document.getElementById("nume").value;
+            console.log(nume);
+        }
+    </script>
+
+    <input type="text" name="nume" id="nume" value="" onblur="getName()">  
+    <!-- Onblur cand ies din input, se afiseaza in consola numele -->
+</body>
+</html>

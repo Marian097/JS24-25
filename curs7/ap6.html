@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const myArray =[
+        [2, 6, 3, 9, 10, 5, 3, 16, 12, 4],
+        [5, 9, 2, 6, 12, 43, 23, 1],
+        [12, 45, 2, 9, 10, 4, 8, 5],
+        ];
+
+
+        myArray.forEach((arr) => {
+            if ( arr < arr[0 + 1])
+            {
+                let temp=arr[0+1];
+                arr[0+1]=arr;
+                arr = temp;
+            };
+            console.log(arr)
+        });
+
+        
+    </script>
+</body>
+</html>
+
+
