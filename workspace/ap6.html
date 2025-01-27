@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const produse = [
+        { nume: 'Telefon', pret: 2500 },
+        { nume: 'Laptop', pret: 4500 },
+        { nume: 'Televizor', pret: 3000 },
+    ];
+
+    Array.prototype.calculeazaSuma = function () {
+        return this.reduce((total, produs) => total + produs.pret, 0);
+      };
+
+      const sumaTotala = produse.calculeazaSuma();
+      console.log(sumaTotala);
+
+
+          
+    </script>
+    
+</body>
+</html>
+
+
+<!-- Exercițiu 3: Adăugare funcție custom pe prototipul array-ului
+Task: Adaugă o funcție pe prototipul Array care calculează suma prețurilor produselor. -->
+
+  

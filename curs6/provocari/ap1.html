@@ -15,11 +15,11 @@
             this.anFabricatie=anFabricatie;
             this.viteza=viteza;
             this.motor=motor;
-            this.afiseaza = () => {
+            this.afiseaza = function() {
                 document.write(`Avem o masina marca: ${this.marca},  model: ${this.model} din anul ${this.anFabricatie} cu un motor ${this.motor} care poate ajunge pana la viteza de 
                 ${this.viteza} - 100 km/h in 10 minute.`); //=> Am creat metoda pentru a afisa detaliile masinii.
             };
-            this.cresteViteza= () =>{    //=> Am creat metoda cresteViteza.
+            this.cresteViteza= function(){    //=> Am creat metoda cresteViteza.
 
                 for (let i=0; i <100; i++) //=> Folosim un For unde verificam daca viteza este mai mica de 100, masina fiind oprita, daca este mai mic, pornim si acceleram
                                            // => pana la 100 km.
@@ -27,9 +27,9 @@
                     this.viteza++          // = > Acceleram masina.
                     console.log(`${this.viteza} km/h`) //=> Afisam kilometrajul.
                 }
-            };
+            }; 
 
-            this.oprireMasina= ()=>{            //=> Am creat metoda oprireMasina.
+            this.oprireMasina= function(){            //=> Am creat metoda oprireMasina.
                 for (let i = 100; i <= 100; i--) //=> Daca viteza este de 100 km/h, scadem treptat viteza si o oprim.
                 {
                     if (i == 0)

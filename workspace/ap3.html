@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducerile Produselor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reducerile Produselor</h1>
+        <p>Introduceți procentajele pentru reducere generală și reducerile din ianuarie:</p>
+
+        <!-- Formular pentru reduceri -->
+        <div class="form-group">
+            <label for="reducere">Reducere generală (%):</label>
+            <input type="number" id="reducere" value="20">
+        </div>
+        <div class="form-group">
+            <label for="reducereIanuarie">Reducere suplimentară (%):</label>
+            <input type="number" id="reducereIanuarie" value="30">
+        </div>
+        <button id="calculeaza">Calculează Reducerile</button>
+
+        <!-- Tabel pentru afișarea produselor -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Produs</th>
+                    <th>Preț Original</th>
+                    <th>Preț Reducere</th>
+                    <th>Preț Reducere Ianuarie</th>
+                </tr>
+            </thead>
+            <tbody id="tabelProduse">
+                <!-- Produsele vor fi generate din JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Array-ul de produse
+        const produse = [
+            { nume: 'Telefon', pret: 2500, categorie: 'Electronice' },
+            { nume: 'Laptop', pret: 4500, categorie: 'Electronice' },
+            { nume: 'Canapea', pret: 1500, categorie: 'Mobilier' },
+            { nume: 'Televizor', pret: 3000, categorie: 'Electronice' },
+            { nume: 'Scaun', pret: 300, categorie: 'Mobilier' },
+        ];
+
+        // Funcția care calculează reducerile
+        function adaugaCategorieReducere(produse, reducere, reducere2) {
+            return produse.map(function (produs) {
+                return {
+                    nume: produs.nume,
+                    pretOriginal: produs.pret,
+                    pretReducere: produs.pret - produs.pret * (reducere / 100),
+                    pretReducereIanuarie: produs.pret - produs.pret * (reducere2 / 100),
+                };
+            });
+        }
+
+        // Funcția pentru afișarea produselor în tabel
+        function afiseazaProduse(produse) {
+            const tabel = document.getElementById('tabelProduse');
+            tabel.innerHTML = ''; // Curățăm tabelul înainte de afișare
+
+            produse.forEach(function (produs) {
+                const row = `
+                    <tr>
+                        <td>${produs.nume}</td>
+                        <td>${produs.pretOriginal} RON</td>
+                        <td>${produs.pretReducere.toFixed(2)} RON</td>
+                        <td>${produs.pretReducereIanuarie.toFixed(2)} RON</td>
+                    </tr>
+                `;
+                tabel.innerHTML += row; // Adăugăm rândurile în tabel
+            });
+        }
+
+        // Event listener pentru buton
+        document.getElementById('calculeaza').addEventListener('click', function () {
+            const reducere = parseFloat(document.getElementById('reducere').value);
+            const reducereIanuarie = parseFloat(document.getElementById('reducereIanuarie').value);
+
+            // Calculăm reducerile
+            const produseCuReduceri = adaugaCategorieReducere(produse, reducere, reducereIanuarie);
+
+            // Afișăm produsele în tabel
+            afiseazaProduse(produseCuReduceri);
+        });
+
+        // Afișăm produsele inițial cu valorile implicite
+        document.getElementById('calculeaza').click();
+    </script>
+</body>
+</html>

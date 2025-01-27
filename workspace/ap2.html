@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-      
+        // Exercițiu: Lucru cu array-uri și funcții prototip
+        //Task: Creează un array de obiecte care reprezintă produse (de exemplu: un produs poate avea nume, pret, categorie).
+        //Creează o funcție care folosește map() pentru a returna un array cu numele produselor.->
+        const produse = [
+            { nume: 'Telefon', pret: 2500, categorie: 'Electronice' },
+            { nume: 'Laptop', pret: 4500, categorie: 'Electronice' },
+            { nume: 'Canapea', pret: 1500, categorie: 'Mobilier' },
+            { nume: 'Televizor', pret: 3000, categorie: 'Electronice' },
+            { nume: 'Scaun', pret: 300, categorie: 'Mobilier' },
+        ];
+
+        function obtinemNume(array) {
+            const numeProduse = array.map(function (produs) {
+                return produs.nume;
+            });
+
+            return numeProduse;
+
+        }
+
+        const numeProduse = obtinemNume(produse);
+        console.log(numeProduse)
+
+
 
     </script>
-    
+
 </body>
+
 </html>
-
-
-
-
-<!-- 2. Căutare în array de obiecte
-Scrie o funcție care primește un array de obiecte și un criteriu de căutare (un string). Returnează toate obiectele care conțin acel criteriu într-un anumit câmp. -->
-
-<!-- https://chatgpt.com/c/67909ebe-7288-8012-8c1f-9e5e1576402f -->

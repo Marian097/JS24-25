@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500 },
+            { nume: 'Laptop', pret: 4500 },
+            { nume: 'Televizor', pret: 3000 },
+        ];
+
+        function extrageNume(array) {
+            const newArray = array.map(function(produs) {
+                return produs.nume;
+            });
+            return newArray;
+        };
+
+        const numeProduse = extrageNume(produse);
+        console.log(numeProduse);
+
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- Exercițiul 2: Extrage numele produselor
+Scrie o funcție care returnează un array ce conține doar numele produselor. -->

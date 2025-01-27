@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500 },
+            { nume: 'Laptop', pret: 4500 },
+        ];
+
+        function adaugaStoc(array)
+        {
+           array.forEach(element => {    // => in cazul de fara element este obiectul din array.
+            element.stoc = 100;
+           })
+
+        }
+        adaugaStoc(produse);
+        console.log(produse);
+
+    </script>
+</body>
+
+</html>
+
+<!-- Exercițiul 1: Adaugă o proprietate nouă
+Scrie o funcție care primește un array de produse și adaugă o nouă proprietate, stoc, pentru fiecare produs. Toate produsele vor avea o valoare de stoc implicită de 100. -->

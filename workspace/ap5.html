@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500 },
+            { nume: 'Laptop', pret: 4500 },
+            { nume: 'Televizor', pret: 3000 },
+        ];
+
+        function aplicaReduceri(array, reducere)
+        {
+            let reduceri = array.map(produs => {
+                return {
+                    nume: produs.nume,
+                    pret: produs.pret,
+                    pretReducere: produs.pret - produs.pret * (reducere / 100)
+                };
+            }); return reduceri;
+        }
+
+        const produseCuReduceri = aplicaReduceri(produse, 20);
+        console.log(produseCuReduceri);
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Exercițiu 2: Creare array cu reduceri
+Task: Scrie o funcție care primește un array de produse și aplică o reducere de 20% la fiecare. Returnează un nou array cu obiecte care conțin nume și pretReducere. -->

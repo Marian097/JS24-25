@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500 },
+            { nume: 'Laptop', pret: 4500 },
+            { nume: 'Televizor', pret: 3000 },
+        ];
+
+        function gasesteCelMaiScump(array)
+        {
+            celMaiMarePret = array[0];
+            
+            array.forEach(produs => {
+                
+                if (produs.pret > celMaiMarePret.pret)
+                {
+                    celMaiMarePret = produs.pret;
+                    
+                };
+            });
+            return celMaiMarePret;
+        }
+
+        const produsScump = gasesteCelMaiScump(produse);
+        console.log(produsScump);
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- Exercițiul 3: Găsește produsul cel mai scump
+Scrie o funcție care returnează produsul cu cel mai mare preț dintr-un array de produse. -->

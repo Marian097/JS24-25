@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const produse = [
+        { nume: 'Telefon', pret: 2500 },
+        { nume: 'Laptop', pret: 4500 },
+        { nume: 'Canapea', pret: 1500 },
+        { nume: 'Televizor', pret: 3000 },
+        { nume: 'Scaun', pret: 300 },
+    ];
+
+
+    function filtreazaProduseScumpe(array){
+        let produseScumpe = array.map((produse) => {
+            if (produse.pret > 1000)
+            {
+                return {
+                    nume : produse.nume,
+                    pret: produse.pret,
+                };
+            };
+        }); return produseScumpe;
+    };
+    
+    
+    const produseScumpe = filtreazaProduseScumpe(produse);
+    console.log(produseScumpe);
+
+    </script>
+
+</body>
+</html>
+
+<!-- Exercițiu 1: Filtrare de produse după preț
+Task: Scrie o funcție care primește un array de produse și returnează doar produsele care costă mai mult de 1000 RON. -->
