@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numere = [1, 2, 3, 4, 5, 6];
+
+        function filtreazaNumerePare(array)
+        {
+            return array.filter(numere => (numere % 2 === 0));
+        }
+        
+        const numerePare = filtreazaNumerePare(numere);
+        console.log(numerePare); // Output: [2, 4, 6]
+
+    </script>
+</body>
+
+</html>

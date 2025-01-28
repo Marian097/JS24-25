@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numere = [1, 2, 3, 4, 5];
+        function calculeazaSuma(array)
+        {  
+
+            return array.reduce((rezultat, element) => rezultat + element, 0);
+        }
+        const suma = calculeazaSuma(numere);
+        console.log(suma); // Output: 15
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- Exercițiul 5: Transformare cu reduce()
+Scrie o funcție care primește un array de numere și returnează suma tuturor elementelor. -->

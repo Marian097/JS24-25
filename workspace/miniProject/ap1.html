@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const produse=[
+        {nume: "Iphone", pret: 4000, categorie: "telefoane"},
+        {nume: "Samsung", pret: 800, categorie: "electrocasnice"},
+        {nume: "Huawei", pret: 3850, categorie: "telefoane"},
+        {nume: "Acer", pret: 2550, categorie: "laptop"},
+        {nume: "HP", pret: 3000, categorie: "laptop"},
+        {nume: "Lenovo", pret: 750, categorie: "electrocasnice"},
+        ];
+
+        function afiseazaProdus(array)
+        {
+            array.forEach(element => {
+                console.log(element);
+            });
+        };
+
+        function filtrareProdus(array, categorieProdus)
+        {
+            return array.filter(element => element.categorie == categorieProdus);
+        };
+
+        function sortareProdusCrescator(array)
+        {
+            return array.sort(function (a, b){
+                return a.pret - b.pret;
+            });
+        };
+
+        function sortareProdusDescrescator(array)
+        {
+            return array.sort(function(a, b){
+                return a.pret + b.pret;
+            });
+        };
+
+        function calculareSumaCategorie(array, categorieProdus) {
+            return array.reduce((suma, element) => {
+                if (element.categorie === categorieProdus) {
+                    suma += element.pret; // Adăugăm prețul produsului la sumă dacă categoria se potrivește
+                }
+                return suma; // Returnăm suma acumulată
+            }, 0); // Începem acumularea de la 0
+        };
+        
+
+
+        const afiseazaprodus=afiseazaProdus(produse);
+
+        const filtrareprodus=filtrareProdus(produse, "telefoane");
+
+        const sortareproduscrescator=sortareProdusCrescator(produse);
+
+        const sortareprodusdescrescator=sortareProdusDescrescator(produse);
+
+        const calculeazasumacategorie=calculareSumaCategorie(produse, "laptop");
+
+
+        console.log(filtrareprodus);
+        console.log(sortareproduscrescator);
+        console.log(sortareprodusdescrescator);
+        console.log(calculeazasumacategorie);
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- Proiect 1: Catalog de produse
+Creează un catalog de produse care permite:
+
+Afișarea produselor (nume, preț, categorie).
+Filtrarea produselor după categorie.
+Sortarea produselor după preț (crescător/descrescător).
+Calcularea sumei totale a produselor dintr-o categorie. -->

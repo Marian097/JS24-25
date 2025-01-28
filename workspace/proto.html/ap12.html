@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const preturiLei = [50, 100, 150];
+        function transformaInEuro(array, euro)
+        {
+            let newArray = array.map((valoare) => (valoare / euro));
+            return newArray;
+            
+        }
+        const preturiEuro = transformaInEuro(preturiLei, 5);
+        console.log(preturiEuro); // Output: [10, 20, 30]
+
+    </script>
+</body>
+
+</html>
+
+<!-- Exercițiul 2: Creare array nou cu map()
+Scrie o funcție care primește un array de prețuri (în lei) și le transformă în euro (1 euro = 5 lei). Returnează un array nou cu prețurile în euro. -->

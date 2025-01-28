@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500 },
+            { nume: 'Laptop', pret: 4500 },
+            { nume: 'Televizor', pret: 3000 },
+        ];
+
+        function gasesteProdusScump(array)
+        {
+            let pretMin=array[0].pret
+            const produsScump = array.find(element => pretMin < element.pret);
+            return produsScump;
+        }
+
+        const produsScump = gasesteProdusScump(produse);
+        console.log(produsScump); // Output: { nume: 'Laptop', pret: 4500 }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Exercițiul 3: Găsește elementul cu find()
+Scrie o funcție care primește un array de obiecte reprezentând produse (cu nume și pret) și returnează produsul cu prețul mai mare de 3000. -->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const produse = [
+            { nume: 'Telefon', pret: 2500, categorie: 'Electronice' },
+            { nume: 'Laptop', pret: 4500, categorie: 'Electronice' },
+            { nume: 'Canapea', pret: 1500, categorie: 'Mobilier' },
+            { nume: 'Scaun', pret: 300, categorie: 'Mobilier' },
+        ];
+
+        function filtreazaDupaCategorie(array, search)
+        {
+            return array.filter(element => element.categorie === search );
+        }
+
+        const electronice = filtreazaDupaCategorie(produse, 'Electronice');
+        console.log(electronice);
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Exercițiul 4: Filtrare după categorie
+Scrie o funcție care returnează doar produsele dintr-o anumită categorie. -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const persoane = [
+            { nume: 'Maria', varsta: 25 },
+            { nume: 'Ion', varsta: 35 },
+            { nume: 'Ana', varsta: 20 },
+        ];
+
+        function sorteazaDupaVarsta(array)
+        {   
+            return array.sort(function (a, b){
+                return a.varsta - b.varsta;
+            });
+        }
+
+        const persoaneSortate = sorteazaDupaVarsta(persoane);
+        console.log(persoaneSortate);
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Exercițiul 6: Sortare cu sort()
+Scrie o funcție care sortează un array de obiecte reprezentând persoane după vârstă, în ordine crescătoare. -->
