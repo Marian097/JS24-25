@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let ToDoList=[];
+
+
+        function adăuga_sarcina($sarcina, $stadiu)
+        {
+            ToDoList.push({sarcina: $sarcina, stadiu: $stadiu})
+
+        };
+
+        function modifica_stadiu($sarcina, $stadiuModificat)
+        {
+            let gasit = false;
+            ToDoList.forEach(element => {
+                if (element.sarcina === $sarcina)
+                {
+                    element.stadiu = $stadiuModificat;
+                    gasit=true;
+                };
+                if (!gasit)
+                {
+                    console.log(`Sarcina ${$sarcina} nu a fost gasita.`)
+                }
+            });
+
+        };
+
+        function sterge_sarcina($sarcina)
+        {
+            let lungimeInitiala = ToDoList.length;
+            ToDoList = ToDoList.filter(element => element.sarcina !== $sarcina);
+
+            if (lungimeInitiala === ToDoList.length)
+            {
+                console.log(`Sarcina ${$sarcina} nu a putut fi gasita pentru a o sterge.`);
+            }
+        };
+
+
+        function filtrare_sarcina($sarcina)
+        {
+            return ToDoList.filter(element => (element.sarcina === $sarcina));
+        }
+
+
+      adăuga_sarcina("ciclism", "finalizat");
+      
+
+
+      adăuga_sarcina("alergare", "In desfasurare");
+      
+      modifica_stadiu("box", "finalizat");
+
+      sterge_sarcina("box");
+
+      
+
+      
+      console.log(ToDoList);
+
+      console.log(filtrare_sarcina("alergare"));
+
+
+      
+
+
+
+        
+    </script>
+    
+</body>
+</html>
+
+<!-- Proiect 2: To-Do List
+Creează o aplicație simplă de tip To-Do List care permite:
+
+Adăugarea de sarcini.
+Ștergerea sarcinilor.
+Marcarea sarcinilor ca „făcute”.
+Filtrarea sarcinilor (toate/făcute/în desfășurare). -->
