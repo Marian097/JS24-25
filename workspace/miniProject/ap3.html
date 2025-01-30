@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function GhicesteNumar() {
+            alert("Începem jocul.");
+            let numarAleatoriu = Math.floor(Math.random() * 100) + 1; // Generăm un număr între 1 și 100
+            console.log("Numărul secret este:", numarAleatoriu);
+            let numar = null; // Inițializăm variabila
+        
+            while (true) {
+                let input = prompt("Ghicește numărul (sau scrie 'stop' pentru a ieși):");
+        
+                if (input === null) { 
+                    alert("Ai renunțat la joc.");
+                    return;
+                }
+        
+                if (input.toLowerCase() === "stop") {
+                    alert("Joc oprit!");
+                    return;
+                }
+        
+                let numar = Number(input); // Convertim în număr după ce verificăm "stop"
+        
+                if (isNaN(numar) || numar < 1 || numar > 100) {
+                    alert("Te rog să introduci un număr valid între 1 și 100.");
+                    continue;
+                }
+        
+                if (numar < numarAleatoriu) {
+                    alert("Numărul introdus este prea mic.");
+                } else if (numar > numarAleatoriu) {
+                    alert("Numărul este prea mare.");
+                } else {
+                    alert(`Felicitări! Ai ghicit numărul ${numarAleatoriu}!`);
+                    break;
+                }
+            }
+        
+            let raspuns = prompt("Dorești să continui jocul? (Y/N)").toLowerCase();
+            
+            if (raspuns === "y") {
+                GhicesteNumar();
+            } else {
+                alert("Mulțumim pentru participare!");
+            }
+        }
+
+        GhicesteNumar()
+        
+    </script>
+</body>
+
+</html>
+
+<!-- 
+✅ Reguli:
+Calculatorul alege un număr aleatoriu între 1 și 100.
+Utilizatorul trebuie să ghicească numărul.
+După fiecare încercare, jocul oferă indicii:
+Dacă numărul introdus este prea mic, spune "Numărul este prea mic!"
+Dacă este prea mare, spune "Numărul este prea mare!"
+Dacă este corect, utilizatorul câștigă și se oprește jocul.
+La final, utilizatorul poate alege să înceapă un nou joc. -->
