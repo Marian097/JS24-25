@@ -1,23 +1,29 @@
-<input type="text" id="search" placeholder="Caută un produs...">
-<ul id="list">
-    <li>Telefon</li>
-    <li>Laptop</li>
-    <li>Tabletă</li>
-    <li>Televizor</li>
-    <li>Căști</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="search" id="search">
+    
+    <ul id="container">
+        <li>Telefon</li>
+        <li>Tableta</li>
+        <li>Aragaz</li>
+        <li>Frigider</li>
+    </ul>
+    <p id="output" style="display: none; color: red;">Nici o potrivire</p>
 
-<script src="./script.js"></script>
-
-
+    <script src="./script.js"></script>
+    
 </body>
-
 </html>
 
-
-<!-- 🟢 1. Filtrare de produse într-o listă simplă
+<!-- 🟢 1. Exercițiu: Căutare dinamică într-o listă
 📌 Cerere:
 
-Creează un input text și o listă (ul > li) de produse.
-Când utilizatorul tastează, lista trebuie să afișeze doar produsele
-care conțin textul introdus. -->
+Creează un input text și o listă de elemente (ul > li).
+Pe măsură ce tastezi, lista trebuie să afișeze doar elementele care conțin textul introdus.
+Dacă textul introdus nu corespunde cu niciun element, afișează "Nicio potrivire". -->
